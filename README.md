@@ -5,6 +5,17 @@
 AutoKey3D (formerly known as PhotoBump) is a software to create 3D models for
 key blanks, bumpkeys and regular keys.
 
+This is an updated fork with the addition of metric measures.
+ For that, some things should be updated on files before the key generation.
+1. You should have the distance between the shoulder and the first PIN for the **aspace** variable on the metric.scad file
+2. You shoud have the key length for the **kl** variable on the metric.scad file
+3. You should have the space between each pin for the variable **pinspace** on the metric.scad file
+3. You should have the height of each PIN from the key base
+4. You can now generate the key by using the command like this `python3 AutoKey.py --key 6.7,6.3,7.8,6.6,6.7 --profile profiles/metric.svg --definition definitions/metric.scad`
+5. You should to update the metric.scg file by te profile that you ant to use.
+
+Note: The original author of the tool created a web site with that tool but the metric is not still implemented. A [pull request](https://github.com/choller/autokey3d/pull/7) is open to add that feature to avoid having all the dependencies installed on a computer (https://autokey.own-hero.net)
+
 ## License
 
 Please note that AutoKey3D is released under a *non-commercial* license (CC BY-NC-SA 4.0).
